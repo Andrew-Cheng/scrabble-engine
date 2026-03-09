@@ -1,7 +1,7 @@
-#include "Piece.h"
+#include "../include/Piece.h"
 
-//constructor
-Piece::Piece(char letter, std::uint8_t value)
+//constructor for piece
+Piece::Piece(char letter, std::uint32_t value)
 : letter_(letter), value_(value), is_wildcard_(false)
 {
     if (letter_ == '_'){
@@ -9,15 +9,16 @@ Piece::Piece(char letter, std::uint8_t value)
     }
 }
 
-//getters
-std::uint8_t Piece::getValue(){
+//get value of piece
+std::uint32_t Piece::getValue(){
     return value_;
 }
+//get value of piece
 char Piece::getLetter(){
     return letter_;
 }
 
-//setters
+//set letter (for wildcards)
 void Piece::setLetter(char letter){
     letter_ = letter;
 }
