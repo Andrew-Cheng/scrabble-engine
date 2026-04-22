@@ -10,15 +10,18 @@ Piece::Piece(char letter, std::uint32_t value)
 }
 
 //get value of piece
-std::uint32_t Piece::getValue(){
+std::uint32_t Piece::getValue() const {
     return value_;
 }
-//get value of piece
-char Piece::getLetter(){
+char Piece::getLetter() const {
     return letter_;
 }
 
 //set letter (for wildcards)
 void Piece::setLetter(char letter){
     letter_ = letter;
+}
+
+bool Piece::isWildcard() const {
+    return is_wildcard_;
 }

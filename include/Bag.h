@@ -5,10 +5,12 @@
 #include <random>
 #include <cstdint>
 #include "Piece.h"
+
 class Bag {
+    public: 
+        struct tile;
     private: 
         std::vector<Piece> bag_;
-        std::mt19937 mt;
     public: 
         Bag();
         std::vector<Piece> drawPieces(std::uint32_t count);

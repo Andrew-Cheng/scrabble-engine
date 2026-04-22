@@ -1,5 +1,4 @@
 #include "../include/Bag.h"
-#include "../include/Piece.h"
 #include <iostream>
 #include <iterator>
 #include <algorithm> 
@@ -40,9 +39,9 @@ Bag::Bag()
         Piece('X', 8),
         Piece('Y', 4), Piece('Y', 4),
         Piece('Z', 10),
-    }}, 
-    mt{std::random_device{}()}
+    }} 
 {
+    std::mt19937 mt{std::random_device{}()};
     std::shuffle(bag_.begin(), bag_.end(), mt);
 }
 

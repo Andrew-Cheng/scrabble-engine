@@ -11,7 +11,8 @@ class Piece {
     public: 
         Piece(char letter, std::uint32_t val);
         void setLetter(char letter);
-        char getLetter();
-        std::uint32_t getValue();
+        char getLetter() const;
+        std::uint32_t getValue() const;
+        bool isWildcard() const;
 };
 #endif
